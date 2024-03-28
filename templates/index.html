@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"> {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>{{ company }}</title>
+    {% endif %}
+
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/favicon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Bell - v4.3.0
+  * Template URL: https://bootstrapmade.com/bell-free-bootstrap-4-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="hero-brand" href="{% url 'home' %}" title="Home"><img alt="Bell Logo" src="{% static 'img/logo.png' %}"></a>
+                </div>
+            </div>
+            {% include "messages.html" %}
+
+            <div class="col-md-12">
+                <h1>
+                    We are {{ company }}
+                </h1>
+
+
+                <p class="tagline">
+                    <!-- We construct and renovate pools and do all sorts of handy man work like painting, paving etc. -->
+                    All your paving, painting & construction needs at best prices!
+                </p>
+                <a class="btn btn-full scrollto" href="#about">Get Started Now</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Hero -->
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+            <div id="logo" class="me-auto">
+                <a href="{% url 'home' %}"><img src="{% static 'img/logo-nav.png' %}" alt=""></a>
+                <!-- Uncomment below if you prefer to use a text image -->
+                <!--<h1><a href="#hero">Bell</a></h1>-->
+            </div>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#features">Services</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li> -->
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+            <div class="header-social-links d-flex align-items-center">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section class="about" id="about">
+
+            <div class="container text-center">
+                <h2>
+                    About {{ company }}
+                </h2>
+
+                <p>
+                    We at {{ company }} is a company which offer all your construction needs at the best prices. We believe that renovations is important to increase the lifestyle and the value of your home. Our work is fun and easy, but professional. We believe that
+                    your house must be turned into a home with the best value, but still have money in your pocket for that expensive holiday. We at {{ company }} is a construction company that value our clients and offer the best service with friendliness
+                    and efficiency We can meet any deadline and no job is too big or to small.
+                </p>
+
+                <div class="row stats-row">
+                    <div class="stats-col text-center col-md-3 col-sm-6">
+                        <div class="circle">
+                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter stats-no"></span> Satisfied Customers
+                        </div>
+                    </div>
+
+                    <div class="stats-col text-center col-md-3 col-sm-6">
+                        <div class="circle">
+                            <span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1" class="purecounter stats-no"></span> Released Projects
+                        </div>
+                    </div>
+
+                    <div class="stats-col text-center col-md-3 col-sm-6">
+                        <div class="circle">
+                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter stats-no"></span> Hours Of Support
+                        </div>
+                    </div>
+
+                    <div class="stats-col text-center col-md-3 col-sm-6">
+                        <div class="circle">
+                            <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1" class="purecounter stats-no"></span> Hard Workers
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End About Section -->
+
+        <!-- ======= Welcome Section ======= -->
+        <section class="welcome text-center">
+            <div class="container">
+                <h2>Welcome to {{ company }}</h2>
+                <p>
+                    Whether you are just surfing through the net, or you are looking for professional handyman, this is the right place.
+                </p>
+                <!-- <img alt="Bell - A perfect theme" class="gadgets-img hidden-md-down" src="{% static 'img/gadgets.png' %}"> -->
+                <small>
+                    {{ company }} is a privately owned construction company which has adopted an ettiquete of professionalism, quality service delivery and good customer support. As a member of this company i have no doubt that you have come to the right place. If you find
+                    yourself loving or admiring what we do, we are just a call away. {{ company }} is also free to work with you as a patner of choice, of course T and Cs apply on this.
+                </small>
+            </div>
+        </section>
+        <!-- End Welcome Section -->
+
+        <!-- ======= Features Section ======= -->
+        <section class="features" id="features">
+
+            <div class="container">
+                <h2 class="text-center">
+                    Services
+                </h2>
+
+                <div class="row">
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-briefcase"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Pool Cleaning
+                                </h3>
+
+                                <p>
+                                    Regular pool cleaning and chemical balancing is essential if you want to enjoy a clean and healthy swimming pool. Call today to get assistance with:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-card-checklist"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Pool Maintenance
+                                </h3>
+
+                                <p>
+                                    Having a swimming pool requires maintenance and upkeep. If you don’t have time to do it yourself, one of our trusted swimming pool professionals will assist you.
+                                    <!-- A poorly maintained swimming pool is unhealthy and could also lead to serious problems in
+                                    the long run. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-bar-chart"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Fibre Line
+                                </h3>
+
+                                <p>
+                                    Gunite Pools, Marbelite Pools, Existing Fibre Pools, Koi ponds, Any pool surface that is damaged or leaks, Reduction of larger pools & completing with Fibre Lining
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-binoculars"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Swimming Pool Renovations                                </h3>
+
+                                <p>
+                                    - Marbelite Pool Renovations
+                                    - Fiberglass Pool Renovations
+                                    - Pool Resurfacing - Pool Relining
+                                    - Pool Epoxy - Pool Resize And More                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-brightness-high"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Renovation
+                                </h3>
+
+                                <p>
+                                    New Led Lights, New Suction and return Lines, New weir replacement, Pump & Filter replacements, New coping, Water features, Chlorinators
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-calendar4-week"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Paving
+                                </h3>
+                                <p>
+                                    Driveway paving; Residential paving; Industrial paving; Parking areas; Kerbs; Patio paving; Walkway paving: Swimming pool paving; Warehouse paving.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-binoculars"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Plumbing
+                                </h3>
+
+                                <p>
+                                    {{ company }} is equipped to meet all your plumbing needs. We provide the highest quality services at competitive prices with prompt, professional and friendly service.
+                                    <!-- At {{ company }} we pride ourselves on providing our customers with workmanship that
+                                    guarantees 100% satisfaction. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-brightness-high"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Construction
+                                </h3>
+
+                                <p>
+                                    Concrete Work, Metal Work, Aluminum and Glazing, Mechanical, Shopfitting, Joint Sealing, Plastering and Spalling, Ceiling and Partitioning, Tenant Installation, Roofing
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-col col-lg-4 col-xs-12">
+                        <div class="card card-block text-center">
+                            <div>
+                                <div class="feature-icon">
+                                    <i class="bi bi-calendar4-week"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Painting
+                                </h3>
+                                <p>
+                                    Painting of your steel palisades, gates, doors, decks, thatch timber, garage doors, window frames, galvanized gutters and down pipes, etc. makes it rust/corrosion and your wood
+                                    <!-- mold/swell free, even before painting a good treatment and primer insures
+                                    a long-life span of your steel and wood. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Features Section -->
+
+        <!-- ======= Call to Action Section ======= -->
+        <section class="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-sm-12 text-lg-start text-center">
+                        <h2>
+                            Need a helping hand?
+                        </h2>
+
+                        <p>
+                            Do you need a pool technician to renovate your pool or build a pool for you or even clean your pool? Don't look further!!!
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+                        <a class="btn btn-ghost" href="#">Call Us Now!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Call to Action Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section class="portfolio" id="portfolio">
+
+            <div class="container text-center">
+                <h2>
+                    Portfolio
+                </h2>
+
+                <p>
+                    View a wide range of services we offer and feel free to contact us with your own style and we will deliver everything on point.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-1.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-1.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Pool Renovation
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We renovate pools at an affordable price.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-2.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-2.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Pool Maintenance
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We offer high end pool maintenance just for you.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-3.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-3.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Plumbing services
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We offer plumbing services to suit your needs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-4.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-4.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Kitchen plumbing
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We offer kitchen plumbing services with nice finishes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-5.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-5.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Pavement Construction
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We are the right team to work on your Pavement
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-6.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-6.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Painting Services
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We offer a wide range of painting services
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-7.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-7.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Gate installation
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We can install your gate in a short space of time.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="{% static 'img/porf-8.jpg' %}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="{% static 'img/porf-8.jpg' %}">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title">
+                                            Woodwork services
+                                        </h3>
+
+                                        <p class="card-text">
+                                            We make fit in your wall wadrobe in a short space of time.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio Section -->
+
+        <!-- ======= Team Section ======= -->
+        <!-- 
+        <section class="team" id="team">
+            <div class="container">
+                <h2 class="text-center">
+                    Meet our team
+                </h2>
+
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="card card-block">
+                            <a href="#"><img alt="" class="team-img" src="{% static 'img/team-1.jpg' %}">
+                                <div class="card-title-wrap">
+                                    <span class="card-title">Sergio Fez</span> <span class="card-text">Manager</span>
+                                </div>
+
+                                <div class="team-over">
+                                    <h4 class="hidden-md-down">
+                                        Connect with me
+                                    </h4>
+
+                                    <nav class="social-nav">
+                                        <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                    </nav>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="card card-block">
+                            <a href="#"><img alt="" class="team-img" src="{% static 'img/team-2.jpg' %}">
+                                <div class="card-title-wrap">
+                                    <span class="card-title">Sergio Fez</span> <span class="card-text">Member</span>
+                                </div>
+
+                                <div class="team-over">
+                                    <h4 class="hidden-md-down">
+                                        Connect with me
+                                    </h4>
+
+                                    <nav class="social-nav">
+                                        <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                    </nav>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="card card-block">
+                            <a href="#"><img alt="" class="team-img" src="{% static 'img/team-3.jpg' %}">
+                                <div class="card-title-wrap">
+                                    <span class="card-title">Sergio Fez</span> <span class="card-text">Member</span>
+                                </div>
+
+                                <div class="team-over">
+                                    <h4 class="hidden-md-down">
+                                        Connect with me
+                                    </h4>
+
+                                    <nav class="social-nav">
+                                        <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                    </nav>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="card card-block">
+                            <a href="#"><img alt="" class="team-img" src="{% static 'img/team-4.jpg' %}">
+                                <div class="card-title-wrap">
+                                    <span class="card-title">Sergio Fez</span> <span class="card-text">Member</span>
+                                </div>
+
+                                <div class="team-over">
+                                    <h4 class="hidden-md-down">
+                                        Connect with me
+                                    </h4>
+
+                                    <nav class="social-nav">
+                                        <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                    </nav>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- End Team Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="section-title">Contact Us</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="info">
+                            <div>
+                                <i class="bi bi-geo-alt"></i>
+                                <p>{{ address|safe }}
+                                </p>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-envelope"></i>
+                                <p>info@{{ domain }}</p>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-phone"></i>
+                                <p>{{ tel1 }} <br> {{ tel2 }} </p>
+                                <!-- <br> 061 431 9286 -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-8">
+                        <div class="form">
+                            <!-- forms/contact.php -->
+                            <form action="{% url 'home' %}" method="post" role="form" class="php-email-form">{% csrf_token %}
+                                <!-- class="php-email-form" -->
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                                </div>
+                                <div class="text-center"><button type="submit">Send Message</button></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer class="site-footer">
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-xs-12 text-lg-start text-center">
+                        <p class="copyright-text">
+                            &copy; Copyright <strong><a href="https://stemgon.co.za" target="_blank">Stemgon</a></strong>. All Rights Reserved
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="#about">About Us</a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="#features">Services</a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="#portfolio">Portfolio</a>
+                            </li>
+
+
+
+                            <li class="list-inline-item">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
